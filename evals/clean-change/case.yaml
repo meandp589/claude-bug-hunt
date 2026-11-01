@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: clean-change
+description: Small correct change with tests; the hunt should report no bugs caused by it (false-positive check).
+tags: [precision]
+context:
+  scaffold_script: fixture.sh

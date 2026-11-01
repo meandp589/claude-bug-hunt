@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: planted-bugs
+description: Feature branch with two planted bugs (boundary, missing owner check) and one exception the commit message declares on purpose.
+tags: [recall, intent]
+context:
+  scaffold_script: fixture.sh
