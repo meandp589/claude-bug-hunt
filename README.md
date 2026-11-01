@@ -35,7 +35,7 @@ Ask in plain words ("review this branch", "review PR 42", "any bugs before I mer
 
 It works best when the repo can run its tests locally and has a `CLAUDE.md` (or `AGENTS.md`) listing its commands, rules and traps; the lanes use those to reproduce findings. It never touches production or shared external accounts, edits no tracked files, and cleans up the worktrees and servers it started.
 
-Requirements: Claude Code with the Agent tool, `git`; `gh` for PR numbers. The report is published as an Artifact when that tool is available, otherwise written as a Markdown file outside the repo.
+Requirements: Claude Code with the Agent tool, `git` 2.38+, a POSIX shell (macOS, Linux or WSL); `gh` for GitHub PR numbers. The report is written as a Markdown file outside the repo; it is published elsewhere (e.g. as a claude.ai Artifact) only when your instructions say so, because it quotes your code.
 
 Cost: a full hunt starts up to five lane agents plus up to six verifiers per round. Small diffs (≤ 3 files, ≤ 150 lines) use one lane agent.
 

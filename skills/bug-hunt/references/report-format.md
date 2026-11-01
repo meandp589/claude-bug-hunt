@@ -32,7 +32,7 @@ Name the source you stopped at. "No source found that chooses this behaviour" is
 - Confidence: confirmed | suspect — <evidence: test path + command + output, or what was traced and why it isn't reproduced>
 - Location: <repo-relative path>:<line>[-<line>] (more lines if the bug spans files)
 - What goes wrong: <input/state/user> → <wrong outcome> (expected: <correct outcome>)
-- Intent check: <the intent source you stopped at: "PR body says …" / "spec §x says …" / "apps/web Icon.tsx does the same, comment at sports.ts:10" / "no source found after 1–5"> → <why the behaviour still contradicts it, or what it contradicts instead>
+- Intent check: <the intent source you stopped at: "PR body says …" / "spec §x says …" / "src/Icon.tsx does the same, with a comment at src/icons.ts:10 saying why" / "no source found after 1–5"> → <why the behaviour still contradicts it, or what it contradicts instead>
 - Caused by this change: yes | no — <if no: where it already was, e.g. "same line on main since <sha>" or "<file> is not in the diff">. A clash with what landed on the base branch after the branch was cut counts as yes.
 - Reproduce: <the failing test (path) and command, or a query/curl with its output; numbered steps only if neither is possible; local only>
 - Fix: <the smallest change that removes the bug; name the function/line>
