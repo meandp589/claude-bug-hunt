@@ -1,0 +1,14 @@
+{
+  "name": "claude-bug-hunt",
+  "description": "bug-hunt: an evidence-first code review skill for Claude Code.",
+  "owner": {
+    "name": "meandp589"
+  },
+  "plugins": [
+    {
+      "name": "bug-hunt",
+      "source": "./",
+      "description": "Evidence-first code review with parallel lanes and independent verification of every finding."
+    }
+  ]
+}
