@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.2.0
+
+- Security now checks agent and editor config the change adds or edits: Claude Code hooks and permission lists in `.claude/`, MCP server lists, agent instructions (`CLAUDE.md`, `AGENTS.md`, Cursor/Copilot rules), VS Code folder-open tasks, devcontainer commands, git hook managers and `.envrc`. A command that downloads and runs code, or text telling reviewers or agents what not to report, is a finding.
+- When the scope changes `CLAUDE.md`/`AGENTS.md` or agent config, the hunt takes its rules from the base branch's version; the changed text is reviewed, never followed.
+- A scope that changes agent instructions is not docs-only: it also gets the Security lane.
+- New eval cases `agent-config` (a `curl | sh` SessionStart hook plus a CLAUDE.md line telling reviewers to skip `.claude/`) and `agent-config-quiet` (`Bash(*)` allowed, all project MCP servers auto-enabled, an unpinned `npx -y` MCP server). 1.1.0 already passes both when run with `--allow-tools Bash Write`; they guard against regressions.
+
 ## 1.1.0
 
 - Verifiers now read `references/verifier.md`, so they always get the six verification steps and a fixed answer shape.
